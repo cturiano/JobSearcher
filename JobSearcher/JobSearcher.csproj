@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{192025BF-6C91-40E4-8238-1F0D3E069EEA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JobSearcher</RootNamespace>
+    <AssemblyName>JobSearcher</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.7.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.7.0\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Abstract\HtmlParser.cs" />
+    <Compile Include="Interfaces\IWebClient.cs" />
+    <Compile Include="Abstract\SiteSearcher.cs" />
+    <Compile Include="Factories\UrlFetcherFactory.cs" />
+    <Compile Include="Interfaces\IDialogService.cs" />
+    <Compile Include="Interfaces\ISiteSearcher.cs" />
+    <Compile Include="Models\MonsterListing.cs" />
+    <Compile Include="Models\DiceListing.cs" />
+    <Compile Include="Models\UnknownListing.cs" />
+    <Compile Include="Models\StackOverflowListing.cs" />
+    <Compile Include="Models\IndeedListing.cs" />
+    <Compile Include="Models\Credentials.cs" />
+    <Compile Include="Models\EmailInfo.cs" />
+    <Compile Include="Models\CraigslistListing.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DialogResult.cs" />
+    <Compile Include="Interfaces\IHtmlParser.cs" />
+    <Compile Include="Interfaces\IUrlFetcher.cs" />
+    <Compile Include="SiteSearchers\UnknownSiteSearcher.cs" />
+    <Compile Include="SiteSearchers\DiceSiteSearcher.cs" />
+    <Compile Include="SiteSearchers\StackOverflowSiteSearcher.cs" />
+    <Compile Include="SiteSearchers\MonsterSiteSearcher.cs" />
+    <Compile Include="SiteSearchers\IndeedSiteSearcher.cs" />
+    <Compile Include="SiteSearchers\CraigslistSiteSearcher.cs" />
+    <Compile Include="UrlFetchers\UnknownUrlFetcher.cs" />
+    <Compile Include="HtmlParsers\MonsterHtmlParser.cs" />
+    <Compile Include="HtmlParsers\IndeedHtmlParser.cs" />
+    <Compile Include="HtmlParsers\DiceHtmlParser.cs" />
+    <Compile Include="UrlFetchers\MonsterUrlFetcher.cs" />
+    <Compile Include="HtmlParsers\StackOverflowHtmlParser.cs" />
+    <Compile Include="UrlFetchers\StackOverflowUrlFetcher.cs" />
+    <Compile Include="UrlFetchers\DiceUrlFetcher.cs" />
+    <Compile Include="UrlFetchers\IndeedUrlFetcher.cs" />
+    <Compile Include="HtmlParsers\UnknownHtmlParser.cs" />
+    <Compile Include="Abstract\UrlFetcher.cs" />
+    <Compile Include="Factories\SiteSearcherFactory.cs" />
+    <Compile Include="Utils\BrowserType.cs" />
+    <Compile Include="Utils\SystemWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\VisibilityToBooleanConverter.cs" />
+    <Compile Include="ViewModels\OkViewModel.cs" />
+    <Compile Include="ViewModels\OkCancelViewModel.cs" />
+    <Compile Include="ViewModels\OpenFileViewModel.cs" />
+    <Compile Include="ViewModels\CredentialsViewModel.cs" />
+    <Compile Include="Utils\WebSource.cs" />
+    <Compile Include="ViewModels\YesNoViewModel.cs" />
+    <Compile Include="Views\DialogCredentials.xaml.cs">
+      <DependentUpon>DialogCredentials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DialogOk.xaml.cs">
+      <DependentUpon>DialogOk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DialogYesNo.xaml.cs">
+      <DependentUpon>DialogYesNo.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\DialogCredentials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DialogWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DialogOk.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DialogYesNo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Abstract\BindableBase.cs" />
+    <Compile Include="Abstract\DialogViewModel.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Abstract\ListingBase.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Services\DialogService.cs" />
+    <Compile Include="HtmlParsers\CraigslistHtmlParser.cs" />
+    <Compile Include="Utils\RelayCommand.cs" />
+    <Compile Include="UrlFetchers\CraigslistUrlFetcher.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\DialogWindow.xaml.cs">
+      <DependentUpon>DialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bug-magnifying-glass-icon.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

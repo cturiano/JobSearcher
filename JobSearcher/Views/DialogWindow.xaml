@@ -1,0 +1,7 @@
+﻿<Window x:Class="JobSearcher.Views.DialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding Heading}" Height="300" Width="300"
+        WindowStartupLocation="CenterOwner" SizeToContent="WidthAndHeight" ShowInTaskbar="False" Icon="pack://application:,,,/JobSearcher;component/Resources/bug-magnifying-glass-icon.png">
+   <ContentPresenter x:Name="ContentPresenter" Content="{Binding}" />
+</Window>

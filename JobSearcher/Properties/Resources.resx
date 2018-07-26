@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bug_magnifying_glass_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bug-magnifying-glass-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CoverLetter" xml:space="preserve">
+    <value>To whom it may concern,
+For the 9 years following completion of a Master of Science in Computer Science, I have been writing software in both UI/UX and backend layers in both Windows and Linux environments.  Languages I’ve used at a professional level include C#, C++/C, Java and Python as well as JavaScript, CSS and *ml, and look forward to learning others. I have experience with CVS, SVN, Git and Mercurial version control systems.
+
+Some other tools I have used recently include Visual Studio, TeamCity (build environment), YouTrack, FogBugs and ZenDesk (bug trackers), the ReSharper suite of tools and MSTest and Nunit (unit test frameworks).
+
+Some relevant work experiences include using the TPL, Prism, Entity Framework 5.0, MVVM and WPF for a secure communication platform, working as a member of an Agile Scrum team using WinForms and C# to develop a desktop engineering application and translating a custom advanced statistical analysis package from MatLab into native C++ libraries with managed C++ wrappers.
+
+I am strongly steeped in the OOP/OOD paradigm including design patterns and the STL. I place a high value on using frameworks, industry standards, on collaboration and on designing and architecting prior to implementing. With BS and MS in Computer Science, I have both a very solid and broad base knowledge of software and computer engineering. This experience runs the gamut from embedded programming and assembly to web development and UI/UX design.
+
+In addition to solid software engineering abilities, I bring to the table a demonstrated ability to quickly learn a code base in order to provide almost immediate return on investment. I am approachable, affable, interesting and witty, which helps in today’s team-oriented software development climate.
+
+I look forward to discussing my resume along with the experience and expertise I am able to offer in the near future.
+
+Thank you for your time,
+Chris Turiano</value>
+  </data>
+  <data name="SearchHistory" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;/ArrayOfString&gt;</value>
+  </data>
+  <data name="CraigslistBaseUrl" xml:space="preserve">
+    <value>http://www.craiglist.org/about/sites</value>
+  </data>
+  <data name="CraigslistQueryString" xml:space="preserve">
+    <value>search/sof?query=c%23&amp;is_telecommuting=1</value>
+  </data>
+  <data name="StackOverFlowBaseUrl" xml:space="preserve">
+    <value>https://stackoverflow.com/</value>
+  </data>
+  <data name="StackOverFlowQueryString" xml:space="preserve">
+    <value>jobs/remote-developer-jobs-using-c%23?sort=p</value>
+  </data>
+  <data name="IndeedBaseUrl" xml:space="preserve">
+    <value>https://www.indeed.com</value>
+  </data>
+  <data name="IndeedQueryString" xml:space="preserve">
+    <value>jobs?q=c%23+remote&amp;sort=date&amp;limit=5555</value>
+  </data>
+  <data name="DiceBaseUrl" xml:space="preserve">
+    <value>https://www.dice.com</value>
+  </data>
+  <data name="DiceQueryString" xml:space="preserve">
+    <value>jobs/advancedResult.html?for_one=c%23&amp;for_all=&amp;for_exact=&amp;for_none=&amp;for_jt=&amp;for_com=&amp;for_loc=&amp;sort=date&amp;telecommute=true&amp;limit=1000</value>
+  </data>
+  <data name="MonsterBaseUrl" xml:space="preserve">
+    <value>https://www.monster.com</value>
+  </data>
+  <data name="MonsterQueryString" xml:space="preserve">
+    <value>jobs/search/?q=c__23-remote</value>
+  </data>
+</root>
